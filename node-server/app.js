@@ -42,7 +42,8 @@ var options = {
     audience: config.creds.audience,
     validateIssuer: config.creds.validateIssuer,
     passReqToCallback: config.creds.passReqToCallback,
-    loggingLevel: config.creds.loggingLevel
+    loggingLevel: config.creds.loggingLevel,
+    clientID: config.creds.clientID
 };
 
 // array to hold logged in users and the current logged in user (owner)
