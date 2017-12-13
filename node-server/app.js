@@ -370,10 +370,10 @@ passport.use(oidcStrategy);
 /*
 **/
 
-// server.get('/tasks', passport.authenticate('oauth-bearer', {
-//     session: false
-// }), listTasks);
-server.get('/tasks', listTasks);
+server.get('/tasks', passport.authenticate('oauth-bearer', {
+    session: false
+}), listTasks);
+// server.get('/tasks', listTasks);
 server.get('/tasks/:owner', passport.authenticate('oauth-bearer', {
     session: false
 }), getTask);
