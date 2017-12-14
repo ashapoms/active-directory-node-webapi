@@ -370,10 +370,10 @@ passport.use(oidcStrategy);
 /*
 **/
 
-// server.get('/tasks', passport.authenticate('oauth-bearer', {
-//    session: false
-// }), listTasks);
-server.get('/tasks', listTasks);
+/*
+server.get('/tasks', passport.authenticate('oauth-bearer', {
+    session: false
+}), listTasks);
 server.get('/tasks/:owner', passport.authenticate('oauth-bearer', {
     session: false
 }), getTask);
@@ -401,6 +401,22 @@ server.del('/tasks', passport.authenticate('oauth-bearer', {
     res.send(204);
     next();
 });
+*/
+
+// Handlers without protection
+server.get('/tasks', listTasks);
+server.get('/tasks/:owner', getTask);
+server.head('/tasks/:owner', getTask);
+server.post('/tasks/:owner/:task', createTask);
+server.post('/tasks', createTask);
+server.del('/tasks/:owner/:task', removeTask);
+server.del('/tasks/:owner', removeTask);
+server.del('/tasks', removeTask);
+server.del('/tasks', removeAll, function respond(req, res, next) {
+    res.send(204);
+    next();
+});
+
 
 
 // Register a default '/' handler
