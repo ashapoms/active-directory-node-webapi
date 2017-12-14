@@ -142,7 +142,8 @@ function removeTask(req, res, next) {
 
     Task.remove({
         task: req.params.task,
-        owner: owner
+        // owner: owner
+        owner: req.params.owner
     }, function(err) {
         if (err) {
             req.log.warn(err,
