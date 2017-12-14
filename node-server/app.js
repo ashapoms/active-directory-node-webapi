@@ -170,13 +170,13 @@ function removeAll(req, res, next) {
 
 function getTask(req, res, next) {
 
-    log.info('getTask was called for: ', res.params.owner);
+    log.info('getTask was called for: ', owner);
     Task.find({
         // owner: owner
         owner: req.params.owner
     }, function(err, data) {
         if (err) {
-            req.log.warn(err, 'get: unable to read %s', res.params.owner);
+            req.log.warn(err, 'get: unable to read %s', owner);
             next(err);
             return;
         }
