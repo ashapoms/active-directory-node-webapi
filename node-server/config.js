@@ -7,9 +7,9 @@
      // as you won't get this from the Identity Metadata
      //
      //identityMetadata: 'https://login.microsoftonline.com/common/.well-known/openid-configuration',
-     validateIssuer: true, // if you have validation on, you cannot have users from multiple tenants sign in
+     validateIssuer: false, // if you have validation on, you cannot have users from multiple tenants sign in
  	 passReqToCallback: false,
      loggingLevel: 'info', // valid are 'info', 'warn', 'error'. Error always goes to stderr in Unix.
      clientID: '4ecc99d5-06d4-4b94-bf4f-5a6c55902791',
-     audience: '4ecc99d5-06d4-4b94-bf4f-5a6c55902791'
+     audience: 'centos-srv01.westeurope.cloudapp.azure.com'
  };
