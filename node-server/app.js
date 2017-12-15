@@ -374,7 +374,7 @@ passport.use(oidcStrategy);
 /*
 **/
 
-/*
+
 server.get('/tasks', passport.authenticate('oauth-bearer', {
     session: false
 }), listTasks);
@@ -405,9 +405,9 @@ server.del('/tasks', passport.authenticate('oauth-bearer', {
     res.send(204);
     next();
 });
-*/
 
 
+/*
 // Handlers without protection
 server.get('/tasks', listTasks);
 server.get('/tasks/:owner', getTask);
@@ -421,7 +421,7 @@ server.del('/tasks', removeAll, function respond(req, res, next) {
     res.send(204);
     next();
 });
-
+*/
 
 
 // Register a default '/' handler
