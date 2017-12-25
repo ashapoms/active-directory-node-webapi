@@ -434,7 +434,8 @@ server.get('/', function root(req, res, next) {
         'GET     /tasks',
         'PUT     /tasks/:owner',
         'GET     /tasks/:owner',
-        'DELETE  /tasks/:owner/:task'
+        'DELETE  /tasks/:owner/:task',
+        'DELETE  /tasks/:owner'
     ];
     res.send(200, routes);
     next();
