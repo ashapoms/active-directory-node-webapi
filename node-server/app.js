@@ -63,7 +63,8 @@ var log = bunyan.createLogger({
             stream: process.stdout,
             level: "warn",
             name: "console"
-        }, ]
+        }
+         ]
 });
 
 // MongoDB setup
