@@ -58,12 +58,12 @@ var log = bunyan.createLogger({
             stream: process.stderr,
             level: "error",
             name: "error"
-        }, 
+        }/*, 
         {
             stream: process.stdout,
             level: "warn",
             name: "console"
-        }
+        }*/
          ]
 });
 
