@@ -70,7 +70,7 @@ var log = bunyan.createLogger({
 // MongoDB setup
 // Setup some configuration
 var serverPort = process.env.PORT || 3000;
-var serverURI = (process.env.PORT) ? config.creds.mongoose_auth_mongohq : config.creds.mongoose_auth_local;
+var serverURI = process.env.PORT ? config.creds.mongoose_auth_mongohq : config.creds.mongoose_auth_local;
 
 // Connect to MongoDB
 global.db = mongoose.connect(serverURI);
@@ -299,7 +299,7 @@ server.use(restify.requestLogger());
 server.use(restify.throttle({
     burst: 10,
     rate: 5,
-    ip: true,
+    ip: true
 }));
 
 // Use the common stuff you probably want
