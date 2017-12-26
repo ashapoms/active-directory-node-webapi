@@ -50,6 +50,7 @@ var options = {
 var users = [];
 var owner = null;
 
+/*
 // Our logger
 var log = bunyan.createLogger({
     name: 'Microsoft OAuth2 Example Web Application',
@@ -58,14 +59,18 @@ var log = bunyan.createLogger({
             stream: process.stderr,
             level: "error",
             name: "error"
-        }/*, 
+        }, 
         {
             stream: process.stdout,
             level: "warn",
             name: "console"
-        }*/
+        }
          ]
 });
+*/
+
+// Simple logger
+var log = bunyan.createLogger({ name: 'Microsoft OAuth2 Example Web Application' });
 
 // MongoDB setup
 // Setup some configuration
