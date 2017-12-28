@@ -10,6 +10,6 @@
      validateIssuer: false, // if you have validation on, you cannot have users from multiple tenants sign in
  	 passReqToCallback: false,
      loggingLevel: 'info', // valid are 'info', 'warn', 'error'. Error always goes to stderr in Unix.
-     clientID: '',
+     clientID: '4ecc99d5-06d4-4b94-bf4f-5a6c55902792',
      audience: 'https://graph.windows.net'
  };
